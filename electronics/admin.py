@@ -12,7 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(NetworkNode)
 class NetworkNodeAdmin(admin.ModelAdmin):
-    list_display = ('name', 'node_type', 'city', 'debt', 'supplier_link', 'created_at')
+    list_display = ('node_type', 'name', 'city', 'debt', 'supplier_link', 'created_at')
     list_filter = ('city', 'country', 'node_type')
     search_fields = ('name', 'email', 'city')
     actions = ['clear_debt']
