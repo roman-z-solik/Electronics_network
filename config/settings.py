@@ -19,8 +19,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-     'rest_framework',
+    'rest_framework',
     'electronics',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -79,10 +80,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LANGUAGE_CODE = "ru-ru"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "Europe/Moscow"
 
 USE_I18N = True
 
@@ -90,3 +92,5 @@ USE_TZ = True
 
 
 STATIC_URL = "static/"
+
+AUTH_USER_MODEL = 'users.CustomUser'
